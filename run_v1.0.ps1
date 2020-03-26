@@ -1,4 +1,7 @@
-$userlist = @("name1familyname.companyname.com")
+$userlist = @("name1familyname.companyname.com",
+              "name2familyname.companyname.com",
+              "name3familyname.companyname.com",
+              "name4familyname.companyname.com")
 
 # Get_info
 
