@@ -31,7 +31,7 @@ box = imaplib.IMAP4_SSL('imap.gmail.com', 993); box.login(username, password)
 box.select('Inbox'); typ, data = box.search(None, 'from', username)
 
 for num in data[0].split(): 
-   box.store(num, '+FLAGS', '\\Deleted') 
+   box.store(num, '+FLAGS', '\\Deleted')
 box.expunge(); box.close(); box.logout()
 
 ## Send email with attached updated files
@@ -53,7 +53,7 @@ part3.set_payload((attachment3).read()); encoders.encode_base64(part3)
 part3.add_header('Content-Disposition', "attachment3; filename= "+file3)
  
 msg.attach(part1); msg.attach(part2); msg.attach(part3); text = msg.as_string()
-s = smtplib.SMTP('smtp.gmail.com', 587); s.starttls(); s.login(username, password);
+s = smtplib.SMTP('smtp.gmail.com', 587); s.starttls(); s.login(username, password)
 s.sendmail(username, username, text); s.quit()
 
 
