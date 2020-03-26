@@ -58,9 +58,9 @@ $userlist = @( #"abusereyaahmed.funlabs.com",
 
 # Get_info
 
-<#foreach ($user in $userlist) {
+foreach ($user in $userlist) {
 	powershell -ExecutionPolicy bypass -command Invoke-Command -ComputerName $user -filepath c:\xxx\script\get_info.ps1 | Select-String -Pattern "=","Link-local","Secure Boot","Automatic","Adapter","Tunnel","Media","Configuration","Ethernet","Connection","Subnet","Default","Attempting","BitLocker","Copyright","Protectors","TPM:","PCR","0," -NotMatch | Out-File "c:\xxx\usr_file\info.txt" -Append -Verbose
-	}#>
+	}
 
 # Remote_encrypt
 
@@ -70,12 +70,12 @@ $userlist = @( #"abusereyaahmed.funlabs.com",
 
 # Get_drive
 
-<#foreach ($user in $userlist) {
+foreach ($user in $userlist) {
 	powershell -ExecutionPolicy bypass -command Invoke-Command -ComputerName $user -filepath c:\xxx\script\get_drive.ps1 | Select-String -Pattern "Attempting" -NotMatch | Out-File c:\xxx\usr_file\drive.txt -Append -Verbose
-	}#>
+	}
 
 # Time_sync
 
-<#foreach ($user in $userlist) {
+foreach ($user in $userlist) {
 	powershell -ExecutionPolicy bypass -command Invoke-Command -ComputerName $user -filepath c:\xxx\script\time_set.ps1 | Select-String -Pattern "Firewall","Attempting","powershell","c:","category","error" -NotMatch | Out-File "c:\xxx\usr_file\time.txt" -Append -Verbose
-	}#>
+	}
