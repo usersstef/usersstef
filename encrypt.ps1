@@ -1,5 +1,6 @@
 
 $env:computername
+$env:username
 
 #cmd /c manage-bde -on D: -rp -rk "C:\" -s; manage-bde -autounlock -enable D:          # encrypt full space on hdd/ssd
 #cmd /c manage-bde -on C: -used -rp -rk "C:\" -s; manage-bde -autounlock -enable C:    # encrypt used space on hdd/ssd
