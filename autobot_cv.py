@@ -165,6 +165,8 @@ driver.find_element_by_name(JDescript).send_keys(DescriptContent)
 driver.find_element_by_xpath(JSave).click()
 driver.switch_to_default_content(); print()
 print(" *** IT Operator was updated successfully *** ")
+print()
+print(" *** All the experiences were updated successfully! *** ")
 
 
 
