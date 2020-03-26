@@ -13,5 +13,5 @@ total = 0
 for sum in numlist:
     total += float(sum)
 print()	
-print("The sum of all steam games is:", total)
+print("The sum of all steam games is: ", total)
 
