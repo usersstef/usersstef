@@ -1,5 +1,4 @@
 
-
 import re
 file = open('SteamAllGames.txt')
 
@@ -15,3 +14,4 @@ for sum in numlist:
     total += float(sum)
 print()	
 print("The sum of all steam games is:", total)
+
