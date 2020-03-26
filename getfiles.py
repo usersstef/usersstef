@@ -1,8 +1,7 @@
 
 ## Get list for specific or all files in current directory and subdirectories
 
-import os
-import sys
+import os, sys
 from os import listdir
 from os.path import isfile, join
 
