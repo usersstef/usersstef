@@ -17,7 +17,10 @@ foreach ($user in $userlist) {
 # Remote_encrypt
 
 <#foreach ($user in $userlist) {
-	powershell -ExecutionPolicy bypass -command Invoke-Command -ComputerName $user -filepath c:\xxx\script\encrypt.ps1 | Select-String -Pattern "action","automatic","attempting","bitLocker","computer","copyright","data","encrypted","protectors","save","space","TPM:","PCR","0," -NotMatch | Out-File "c:\xxx\usr_file\key.txt" -Append -Verbose
+	powershell -ExecutionPolicy bypass -command Invoke-Command -ComputerName $user `
+	-filepath c:\xxx\script\encrypt.ps1 | Select-String -Pattern "action","automatic", `
+	"attempting","bitLocker","computer","copyright","data","encrypted","protectors", `
+	"save","space","TPM:","PCR","0," -NotMatch | Out-File "c:\xxx\usr_file\key.txt" -Append -Verbose
 	}#>
 
 # Get_drive
