@@ -5,8 +5,8 @@ import os, sys
 from os import listdir
 from os.path import isfile, join
 
-sys.stdout = open('D:\\miscellaneous\\__scripts\\python\\Radio_2000-2002.txt', 'w') # output file
-path = 'D:\musica\My_music\Radio 2000 - 2002' # source path
+sys.stdout = open('D:\\miscellaneous\\__scripts\\python\\output_file.txt', 'w') # output file
+path = 'D:\musica\My_music\folder_to_music' # source path
 
 ## Parser to list all files name from all subdirectories
 
