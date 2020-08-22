@@ -1,7 +1,7 @@
 
 ## Script name: Backup updater
 
-## Mp3 parser to save & update the tracklist in the txt file
+## Parser to save & update the tracklist in the txt file
 
 import os, sys, imaplib, smtplib
 from email import encoders
