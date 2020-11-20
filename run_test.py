@@ -22,7 +22,7 @@ driver.find_element_by_xpath(close_modal).click();time.sleep(1)
 
 # Input single field
 print(); print(" *** Input form action started... *** ")
-driver.find_element_by_xpath("//*[@id='user-message']").send_keys('The text message is inserted here successfully'); time.sleep(1) # enter msg button
+driver.find_element_by_xpath("//*[@id='user-message']").send_keys('The text message is inserted here successfully');time.sleep(1) # enter msg button
 driver.find_element_by_xpath("//*[@id='get-input']/button").click();time.sleep(1) # show msg button
 
 # Input two field
