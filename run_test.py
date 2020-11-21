@@ -29,7 +29,7 @@ driver.find_element_by_xpath("//*[@id='sum1']").send_keys('1'); time.sleep(1) # 
 driver.find_element_by_xpath("//*[@id='sum2']").send_keys('2'); time.sleep(1) # enter b field
 driver.find_element_by_xpath("//*[@id='gettotal']/button").click() # get total button
 driver.execute_script("window.scrollTo(0,document.documentElement.scrollHeight);");time.sleep(1)
-driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
+driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME);time.sleep(1)
 
 # Dropdown list
 driver.find_element_by_xpath("//*[@id='treemenu']/li/ul/li[1]/a").click();time.sleep(1)
@@ -38,7 +38,7 @@ Select(driver.find_element_by_xpath("//*[@id='select-demo']")).select_by_index(6
 driver.find_element_by_xpath("//*[@id='multi-select']/option[6]").click(); time.sleep(1) # option
 driver.find_element_by_xpath("//*[@id='printMe']").click(); time.sleep(1) # first selected button
 driver.execute_script("window.scrollTo(0,document.documentElement.scrollHeight);");time.sleep(1)
-driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
+driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME);time.sleep(1)
 
 # Range sliders
 driver.get('https://www.seleniumeasy.com/test/drag-drop-range-sliders-demo.html');time.sleep(1)
