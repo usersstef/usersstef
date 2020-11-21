@@ -8,6 +8,7 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 
 ## Parser to save & update the tracklist in the txt file
+
 sys.stdout = open('D:\\miscellaneous\\__scripts\\python\\backup_updater\\dist\\File3.txt', 'w')
 path = 'D:\musica\My_music\Selection'
 
