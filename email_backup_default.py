@@ -9,8 +9,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 
-sys.stdout = open('D:\\miscellaneous\\__scripts\\python\\backup_updater\\dist\\Tracklist.txt', 'w')
-path = 'D:\musica\My_music\Ambiental'
+sys.stdout = open('D:\\miscellaneous\\__scripts\\python\\backup_updater\\dist\\File3.txt', 'w')
+path = 'D:\musica\My_music\Selection'
 
 files = []
 for r, d, f in os.walk(path):
@@ -40,15 +40,15 @@ fromaddr = username; toaddr = username; subject = "Backup"
 msg = MIMEMultipart(); msg['From'] = fromaddr; msg['To'] = toaddr; msg['Subject'] = subject; body = " " 
 msg.attach(MIMEText(body, 'plain')) 
   
-file1 = "Account_status.txt"; attachment1 = open(file1, "rb"); part1 = MIMEBase('application', 'octet-stream')
+file1 = "File1.txt"; attachment1 = open(file1, "rb"); part1 = MIMEBase('application', 'octet-stream')
 part1.set_payload((attachment1).read()); encoders.encode_base64(part1)
 part1.add_header('Content-Disposition', "attachment1; filename= "+file1)
 
-file2 = "Anime_list.txt"; attachment2 = open(file2, "rb"); part2 = MIMEBase('application', 'octet-stream')
+file2 = "File2.txt"; attachment2 = open(file2, "rb"); part2 = MIMEBase('application', 'octet-stream')
 part2.set_payload((attachment2).read()); encoders.encode_base64(part2)
 part2.add_header('Content-Disposition', "attachment2; filename= "+file2)
 
-file3 = "Tracklist.txt"; attachment3 = open(file3, "rb"); part3 = MIMEBase('application', 'octet-stream')
+file3 = "File3.txt"; attachment3 = open(file3, "rb"); part3 = MIMEBase('application', 'octet-stream')
 part3.set_payload((attachment3).read()); encoders.encode_base64(part3)
 part3.add_header('Content-Disposition', "attachment3; filename= "+file3)
  
