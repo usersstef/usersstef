@@ -22,7 +22,7 @@ driver.find_element_by_xpath(close_modal).click();time.sleep(1)
 
 # Input single field
 driver.find_element_by_xpath("//*[@id='user-message']").send_keys('The text message is inserted here successfully');time.sleep(1)  # enter msg
-driver.find_element_by_xpath("//*[@id='get-input']/button").click();time.sleep(1)  # show msg button
+driver.find_element_by_xpath("//*[@id='get-input']/button").click();time.sleep(0.5)  # show msg button
 
 # Input two field
 driver.find_element_by_tag_name('body').send_keys(Keys.END);time.sleep(1)
@@ -69,10 +69,22 @@ ActionChains(driver).click_and_hold(slider).move_by_offset(90, 0).release().perf
 slider = driver.find_element_by_xpath("//*[@id='slider6']/div/input")
 ActionChains(driver).click_and_hold(slider).move_by_offset(90, 0).release().perform();time.sleep(1)
 
-# Copy paste
+# Copy paste & submit form
 driver.get('https://www.seleniumeasy.com/test/input-form-demo.html');time.sleep(1)
-driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[1]/div/div/input").send_keys('Text for copy paste' + Keys.CONTROL + 'a' + 'c');time.sleep(1)
-driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[2]/div/div/input").send_keys(Keys.CONTROL + 'v');time.sleep(1)
+driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[1]/div/div/input").send_keys('First name' + Keys.CONTROL + 'a' + 'c');time.sleep(1)
+driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[2]/div/div/input").send_keys(Keys.CONTROL + 'v');time.sleep(0.5)
+driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[3]/div/div/input").send_keys('address@example.com');time.sleep(0.5)
+driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[4]/div/div/input").send_keys('0723685712');time.sleep(0.5)
+driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[5]/div/div/input").send_keys('Str. No. 8');time.sleep(0.5)
+driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[6]/div/div/input").send_keys('Las Vegas');time.sleep(1)
+Select(driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[7]/div/div/select")).select_by_index(29);time.sleep(0.5)
+driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[8]/div/div/input").send_keys('123456');time.sleep(0.5)
+driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[9]/div/div/input").send_keys('www.website.com');time.sleep(0.5)
+driver.find_element_by_tag_name('body').send_keys(Keys.END);time.sleep(1)
+driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[10]/div/div[2]/label/input").click();time.sleep(1)  # radio button
+driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[11]/div/div/textarea").send_keys('Web Automation Project');time.sleep(1)
+driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[13]/div/button").click();time.sleep(1)  # submit button
+driver.find_element_by_tag_name('body').send_keys(Keys.HOME);time.sleep(1)
 
 # Drag and drop
 driver.get('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html')
