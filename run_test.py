@@ -78,7 +78,8 @@ driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[4]/div/div/in
 driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[5]/div/div/input").send_keys('Str. No. 8');time.sleep(0.5)
 driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[6]/div/div/input").send_keys('Las Vegas');time.sleep(1)
 Select(driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[7]/div/div/select")).select_by_index(29);time.sleep(0.5)
-driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[8]/div/div/input").send_keys('123456');time.sleep(0.5)
+postal_code = 123456
+driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[8]/div/div/input").send_keys(postal_code);time.sleep(0.5)
 driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[9]/div/div/input").send_keys('www.website.com');time.sleep(0.5)
 driver.find_element_by_tag_name('body').send_keys(Keys.END);time.sleep(1)
 driver.find_element_by_xpath("//*[@id='contact_form']/fieldset/div[10]/div/div[2]/label/input").click();time.sleep(1)  # radio button
@@ -117,10 +118,6 @@ target = driver.find_element_by_xpath("//*[@id='box107']")  # Spain
 ActionChains(driver).drag_and_drop(source,target).perform();time.sleep(1)
 print();print(" *** Script executed successfully :) *** ")
 driver.refresh();time.sleep(1);driver.close()
-
-
-
-
 
 
 
