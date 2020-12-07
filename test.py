@@ -3,10 +3,10 @@
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.select import Select
-from selenium.webdriver import ActionChains
+#from selenium.webdriver.chrome.options import Options
+#from selenium.webdriver.common.keys import Keys
+#from selenium.webdriver.support.select import Select
+#from selenium.webdriver import ActionChains
 import time
 
 options = webdriver.ChromeOptions()
