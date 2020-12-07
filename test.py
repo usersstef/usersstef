@@ -66,3 +66,12 @@ class BootstrapAlert:
 if __name__ == '__main__':
     WebSession = BootstrapAlert()
     WebSession.exit()
+
+    
+    
+    
+    
+    
+    
+    
+    
