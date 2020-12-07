@@ -1,5 +1,5 @@
 
-# Check the text alert
+# Generate n number of Draft Contents
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -8,9 +8,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 # from selenium.webdriver.support.select import Select
 # from selenium.webdriver import ActionChains
 import time
+import ctypes
 
 options = webdriver.ChromeOptions()
-driver = webdriver.Chrome(ChromeDriverManager().install())  # driver path
+driver = webdriver.Chrome(ChromeDriverManager().install())                                    # driver path
 options.add_argument(r"user-data-dir=C:\Users\Stefan\AppData\Local\Google\Chrome\User Data")  # user profile path
 driver.maximize_window()
 
@@ -18,7 +19,7 @@ for draft_content, priority in zip(range(2), range(2)):
     print()
     print("DraftContent_%d" %draft_content, "Priority %d" %priority)
     driver.get('https://twitter.com/intent/follow?screen_name=seleniumeasy')
-    time.sleep(1)
+    time.sleep(1.5)
     driver.find_element_by_xpath(
         "//*[@id='layers']/div[2]/div/div/div/div/div/div[2]/div[2]/div/div[1]/div[2]/form/div/div[1]/label/div/div[2]/div/input").send_keys(
         'DraftContent_%d' %draft_content)
@@ -32,14 +33,15 @@ for draft_content, priority in zip(range(2), range(2)):
     time.sleep(1)  # no thanks button
 driver.close()
 
+# after above code is run, there will be to execute 3 ore 4 lines more to bulk publish the 50 or 100 draft contents :)
+ctypes.windll.user32.MessageBoxW(0, "Draft Contents generated & published", "Info", 1)
 
 class BootstrapAlert:
     options = webdriver.ChromeOptions()
-    driver = webdriver.Chrome(ChromeDriverManager().install())  # driver path
-    options.add_argument(r"user-data-dir=C:\Users\Stefan\AppData\Local\Google\Chrome\User Data")  # user profile path
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    options.add_argument(r"user-data-dir=C:\Users\Stefan\AppData\Local\Google\Chrome\User Data")
     driver.maximize_window()
 
-    # Code to test
     def __init__(self):
         self.check_text()
 
@@ -67,6 +69,5 @@ if __name__ == '__main__':
     WebSession = BootstrapAlert()
     WebSession.exit()
 
-    
-    
-    
+
+
