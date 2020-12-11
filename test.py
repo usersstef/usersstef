@@ -46,9 +46,6 @@ class BootstrapAlert:
     options.add_argument(r"user-data-dir=C:\Users\Stefan\AppData\Local\Google\Chrome\User Data")
     driver.maximize_window()
 
-    def __init__(self):
-        self.check_context()
-
     def check_context(self):
         self.driver.get('https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html')
         time.sleep(1)
@@ -64,7 +61,11 @@ class BootstrapAlert:
         else:
             time.sleep(1)
             self.driver.find_element_by_xpath(
-                "/ html / body / div[2] / div / div[2] / div / div[2] / div[2] / button").click();time.sleep(1)
+                "/ html / body / div[2] / div / div[2] / div / div[2] / div[2] / button").click()
+            time.sleep(1)
+
+    def __init__(self):
+        self.check_context()
 
     def exit(self):
         self.driver.close()
@@ -73,3 +74,5 @@ class BootstrapAlert:
 if __name__ == '__main__':
     WebSession = BootstrapAlert()
     WebSession.exit()
+
+
