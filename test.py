@@ -1,23 +1,13 @@
 
-# Generate n number of Draft Contents
-
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-# from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver.common.keys import Keys
-# from selenium.webdriver.support.select import Select
-# from selenium.webdriver import ActionChains
 import time
-import ctypes
 
-options = webdriver.ChromeOptions()
-driver = webdriver.Chrome(ChromeDriverManager().install())                                    # driver path
-options.add_argument(r"user-data-dir=C:\Users\Stefan\AppData\Local\Google\Chrome\User Data")  # user profile path
+driver = webdriver.Chrome(executable_path=r'D:\Scripts\Python\Web_automation\chromedriver.exe')
 driver.maximize_window()
 
-# Generating as many draft contents are needed
+# Generating draft contents
 
-for draft_content, priority in zip(range(51), range(51)):
+for draft_content, priority in zip(range(2), range(2)):
     print()
     print("DraftContent_%d" %draft_content, "Priority %d" %priority)
     driver.get('https://twitter.com/intent/follow?screen_name=seleniumeasy')
@@ -35,15 +25,11 @@ for draft_content, priority in zip(range(51), range(51)):
     time.sleep(1)  # no thanks button
 driver.close()
 
-# after above code is run, there will be to execute 4 ore 5 lines more to bulk publish the 50 or 100 draft contents :)
-#ctypes.windll.user32.MessageBoxW(0, "Draft Contents generated & published", "Info", 1)
-
-# Checking the text inside an alert message and doing something after
+# Read & validate the text of an alert message and doing something after
 
 class BootstrapAlert:
-    options = webdriver.ChromeOptions()
-    driver = webdriver.Chrome(ChromeDriverManager().install())
-    options.add_argument(r"user-data-dir=C:\Users\Stefan\AppData\Local\Google\Chrome\User Data")
+
+    driver = webdriver.Chrome(executable_path=r'D:\Scripts\Python\Web_automation\chromedriver.exe')
     driver.maximize_window()
 
     def check_context(self):
