@@ -15,11 +15,11 @@ for draft_content, priority in zip(range(2), range(2)):
     driver.find_element_by_xpath(
         "//*[@id='layers']/div[2]/div/div/div/div/div/div[2]/div[2]/div/div[1]/div[2]/form/div/div[1]/label/div/div[2]/div/input").send_keys(
         'DraftContent_%d' % draft_content)
-    time.sleep(1)  # user
+    time.sleep(1)  # draft content name
     driver.find_element_by_xpath(
         "//*[@id='layers']/div[2]/div/div/div/div/div/div[2]/div[2]/div/div[1]/div[2]/form/div/div[2]/label/div/div[2]/div/input").send_keys(
         priority)
-    time.sleep(1)  # pass
+    time.sleep(1)  # priority value
     driver.find_element_by_xpath(
         "//*[@id='layers']/div[2]/div/div/div/div/div/div[2]/div[2]/div/div[2]/div[1]/div/span/span/span").click()
     time.sleep(1)  # no thanks button
