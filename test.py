@@ -1,5 +1,5 @@
 
-## Automated actions with loops & functions
+# Automated actions with loops & functions
 
 from selenium import webdriver
 import time
