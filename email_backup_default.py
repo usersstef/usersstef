@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
-# Parse & update the tracklist in the txt file
+# Check & update the tracklist
 
 sys.stdout = open('D:\\miscellaneous\\__scripts\\python\\backup_updater\\dist\\File3.txt', 'w')
 path = 'D:\musica\My_music\Selection'
@@ -22,7 +22,7 @@ for f in files:
     print(f)
 sys.stdout.close()
 
-# Delete current mail from last backup
+# Delete current mail
 
 username = "username"
 password = "password"
@@ -34,7 +34,7 @@ for num in data[0].split():
    box.store(num, '+FLAGS', '\\Deleted')
 box.expunge(); box.close(); box.logout()
 
-# Send email with attached updated files
+# Send email with updated files
 
 fromaddr = username; toaddr = username; subject = "Backup"
 msg = MIMEMultipart(); msg['From'] = fromaddr; msg['To'] = toaddr; msg['Subject'] = subject; body = " " 
