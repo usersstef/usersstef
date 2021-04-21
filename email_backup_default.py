@@ -34,7 +34,7 @@ for num in data[0].split():
    box.store(num, '+FLAGS', '\\Deleted')
 box.expunge(); box.close(); box.logout()
 
-# Send email with updated files
+# Send mail with updated files
 
 fromaddr = username; toaddr = username; subject = "Backup"
 msg = MIMEMultipart(); msg['From'] = fromaddr; msg['To'] = toaddr; msg['Subject'] = subject; body = " " 
