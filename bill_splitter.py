@@ -1,5 +1,4 @@
 
-
 import re
 
 file = open('shopping_list.txt')
