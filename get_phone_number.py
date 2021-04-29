@@ -1,4 +1,6 @@
 
+# The pattern is: First Name 0722 000 111 radnom text Second Name 0723 222 333
+
 import pyperclip, re
 
 file = open('info.txt')
