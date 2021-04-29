@@ -1,5 +1,5 @@
 
-# The pattern is: First Name 0722 000 111 random text Second Name 0723 222 333
+# The text example from "info.txt" file: First Name 0722 000 111 random text Second Name 0723 222 333
 
 import pyperclip, re
 
