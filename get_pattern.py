@@ -9,7 +9,7 @@ file = open('info.txt') # input
 numlist = list()
 for line in file:
     pattern = re.findall('\w+\s\w+\s\d{4}\-\d{3}\-\d{3}', file.read())               # regex for name and phone number format
-    #pattern = re.findall('[A-Za-z0-9\.\-+_*]+@[a-z0-9\.\-+_]+\.[a-z]+', file.read()) # regex for email name format
+    #pattern = re.findall('[A-Za-z0-9\.\-+_*]+@[a-z0-9\.\-+_]+\.[a-z]+', file.read()) # regex for email address format
     if len(pattern) > 0:
         numlist.extend(pattern)
 print()
