@@ -4,17 +4,18 @@
 import re
 import sys
 
-sys.stdout = open('D:\Scripts\Python\phone_list.txt', 'w') # output
+#sys.stdout = open('D:\Scripts\Python\phone_list.txt', 'w') # output
 file = open('info.txt') # input
 numlist = list()
 for line in file:
-    pattern = re.findall('\w+\s\w+\s\d{4}\-\d{3}\-\d{3}', file.read()) # regex
+    pattern = re.findall('\w+\s\w+\s\d{4}\-\d{3}\-\d{3}', file.read())               # regex for name and phone number format
+    #pattern = re.findall('[A-Za-z0-9\.\-+_*]+@[a-z0-9\.\-+_]+\.[a-z]+', file.read()) # regex for email name format
     if len(pattern) > 0:
         numlist.extend(pattern)
 print()
 print("Phone numbers are:", *numlist, sep='\n')
 print()
-sys.stdout.close()
+#sys.stdout.close()
 
 
 
