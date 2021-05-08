@@ -1,0 +1,10 @@
+# USB recover lost space: go to run > diskpart > after you enter in diskpart, type "list disk" to see all the PC drives
+# Warning: remove and insert the usb again to see which drive number is, and after execute next commands:
+
+list disk
+select disk # (here need to insert the number "#" of the usb drive)
+clean
+create partition primary
+exit
+
+# After this you need to go in win explorer > right click on the usb drive > select the entire recovered space and format it as NTFS file
