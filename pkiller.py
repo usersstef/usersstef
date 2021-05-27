@@ -1,5 +1,5 @@
 
-## Script to check tasklist and kill the WATUX proc
+# Script to check tasklist and kill a proc
 
 import os
 import subprocess
@@ -25,3 +25,5 @@ def check_tsklist():            ## Parse the tasklist and return all processes
 while True:
     check_tsklist()
     time.sleep(2)
+    
+    
