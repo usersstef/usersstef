@@ -1,5 +1,5 @@
 
-# The script renames incremental a file in a given range
+# The script copy and renames incrementally a file in a given range
 
 import shutil
 
