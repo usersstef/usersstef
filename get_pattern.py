@@ -1,21 +1,26 @@
 
-# The text sample from info.txt file: "First Name 0722 000 111 random text Second Name 0723 222 333"
-
 import re
 import sys
 
-#sys.stdout = open('D:\Scripts\Python\phone_list.txt', 'w') # output
+sys.stdout = open('D:\Scripts\Python\output_list.txt', 'w') # output
 file = open('info.txt') # input
 numlist = list()
 for line in file:
-    pattern = re.findall('\w+\s\w+\s\d{4}\-\d{3}\-\d{3}', file.read())               # name and phone
-    #pattern = re.findall('[A-Za-z0-9\.\-+_*]+@[a-z0-9\.\-+_]+\.[a-z]+', file.read()) # email address
+    pattern = re.findall('\w+ ?\w+ ?\w+\s+\w+(?:(?:\s\d+-\d+-\d+)?\s+[A-Za-z0-9.+_*-]+@[a-z0-9.+_-]+\.[a-z]+|\s\d+-\d+-\d+)', file.read())  # name + optional phone & email
     if len(pattern) > 0:
         numlist.extend(pattern)
 print()
-print("Phone numbers are:", *numlist, sep='\n')
+print("Searched items are:", *numlist, sep ='\n')
 print()
-#sys.stdout.close()
+sys.stdout.close()
+
+
+
+
+
+
+
+
 
 
 
