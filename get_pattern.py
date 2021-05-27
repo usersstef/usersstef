@@ -1,5 +1,5 @@
 
-# The regex matches for 'First Name1 0723-111-222 email@address1.com' pattern with optional phone number and email address
+# The regex matches for 'First Name1 Name2 Name3 0723-111-222 email@address1.com' pattern with optional two names and optional phone number and email address
 
 import re
 import sys
