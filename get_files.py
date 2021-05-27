@@ -1,5 +1,5 @@
 
-## Get list for specific or all files in current directory and subdirectories
+# Get list for specific or all files in current directory and subdirectories
 
 import os, sys
 from os import listdir
@@ -8,7 +8,7 @@ from os.path import isfile, join
 sys.stdout = open('D:\\Path\\to\\output_file.txt', 'w') # output file
 path = 'D:\Path\to\files_to_be_listed' # source path
 
-## Parser to list all files name from all subdirectories
+# Parser to list all files name from all subdirectories
 
 files = []
 for r, d, f in os.walk(path):
@@ -22,7 +22,7 @@ for f in files:
     print(f)
 sys.stdout.close()
 
-## Parser to list folders/files name only in the current directory
+# Parser to list folders/files name only in the current directory
 '''
 def getListOfFiles(path): 
     listOfFile = os.listdir(path) # create a list of file and sub directories & names in the given directory
