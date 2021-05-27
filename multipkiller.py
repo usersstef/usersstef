@@ -1,11 +1,11 @@
 
-# Script to check tasklist and kill the multiple procs
+# Script to check tasklist and kill multiple procs
 
 import os
 import subprocess
 import time
 
-def check_tsklist():            ## Parse the tasklist and return all processes
+def check_tsklist():            # Parse the tasklist and return all processes
     def getTasks(name):
         r = os.popen('tasklist /v').read().strip().split('\n')
         for i in range(len(r)):
@@ -13,15 +13,17 @@ def check_tsklist():            ## Parse the tasklist and return all processes
             if name in r[i]:
                 return r[i]
         return []
-    if __name__ == '__main__': 	## if targeted proc is alive, then kill it
+    if __name__ == '__main__': 	# if targeted proc is alive, then kill it
         imgName = 'WatUX.exe'
         r = getTasks(imgName)
-        if not r:               ## if targeted proc is not alive, then kill another proc at choice
+        if not r:               # if targeted proc is not alive, then kill another proc at choice
             print('%s is not running' % (imgName))
             #os.system('taskkill /f /im mspaint.exe')
             #os.system('taskkill /f /im taskmgr.exe')
-        else:
+        else:  # targeted proc is alive, then kill it; uncomment the other lines to kill at once multiple procs
             os.system('taskkill /f /im WatUX.exe')
+            #os.system('taskkill /f /im mspaint.exe')
+            #os.system('taskkill /f /im taskmgr.exe')
 while True:
     check_tsklist()
     time.sleep(2)
