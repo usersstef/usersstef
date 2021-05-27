@@ -1,4 +1,6 @@
 
+# The script parse and reocords filenames in a file, attach the file with other two files to email and send the email to backup the files
+
 # Importing modules
 
 import os, sys, imaplib, smtplib
