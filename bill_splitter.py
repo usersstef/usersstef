@@ -18,5 +18,3 @@ for sum in numlist:
 print("The common Total until now:    ", total);print();print("The common Total divided on 3: ", float(total/3))
 print();input(" ")
 
-
-
