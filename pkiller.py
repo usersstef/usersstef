@@ -1,5 +1,5 @@
 
-# Script to check tasklist and kill multiple procs
+# Script to check tasklist and kill one or multiple procs
 
 import os
 import subprocess
