@@ -1,6 +1,6 @@
 
 # The regex matches for 'First Name1 Name2 Name3 0723-111-222 email@address1.com' following next pattern:
-# <FirstName> <SecondName> <OptionalName> <OptionalName> (OptionalPhoneNumber | OptionalEmailAddress)
+# <FirstName> <SecondName> <OptionalName> <OptionalName> (OptionalPhoneNumber or OptionalEmailAddress)
 
 import re
 import sys
