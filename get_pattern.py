@@ -1,4 +1,6 @@
 
+# The regex matches for 'First Name1 0723-111-222 email@address1.com' pattern
+
 import re
 import sys
 
