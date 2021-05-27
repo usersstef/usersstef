@@ -1,5 +1,5 @@
 
-# The script extract data for final result for a string like '01, 30.5' where 01 is the date and 30.5 is the price
+# The script extracts data for final result for a string like '01, 30.5' where 01 is the date and 30.5 is the price
 
 import re
 
@@ -17,4 +17,6 @@ for sum in numlist:
     total += float(sum)
 print("The common Total until now:    ", total);print();print("The common Total divided on 3: ", float(total/3))
 print();input(" ")
+
+
 
