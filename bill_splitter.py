@@ -1,5 +1,5 @@
 
-# The script extracts data for final result for a string like '01, 30.5' where 01 is the date and 30.5 is the price
+# The script extracts data for final result from a string like '01, 30.5' where 01 is the date and 30.5 is the price
 
 import re
 
