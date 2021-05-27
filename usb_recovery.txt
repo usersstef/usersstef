@@ -1,5 +1,5 @@
 
-# USB recover lost space: go to run > diskpart > after you enter in diskpart, type "list disk" to see all the PC drives
+# USB recover lost space: go to run > diskpart > after you open diskpart, type "list disk" to see all the PC drives
 # Warning: remove and insert the usb again to see which drive number is, and after execute next commands:
 
 list disk
