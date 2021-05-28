@@ -1,5 +1,5 @@
 
-# The regex matches for 'First Name1 Name2 Name3 0723-111-222 email@address1.com' following next pattern:
+# The regex matches for 'Name1 Name2 Name3 Name4 0723-111-222 email@address1.com' following next pattern:
 # <FirstName> <SecondName> <OptionalName> <OptionalName> (OptionalPhoneNumber | OptionalEmailAddress)
 
 import re
