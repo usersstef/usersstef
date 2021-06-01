@@ -9,7 +9,9 @@ import time
 
 print();print("  Initializing test environment...")
 
-driver = webdriver.Chrome(executable_path=r'D:\Scripts\Python\Web_automation\chromedriver.exe')
+driver = webdriver.Chrome(
+    executable_path=r"D:\Scripts\Python\Web_automation\chromedriver.exe"
+)
 driver.maximize_window()
 
 # Get URL & close modal
