@@ -5,12 +5,21 @@ import pygetwindow as gw
 from datetime import datetime
 import time
 
-while True:
+'''while True:
     win = gw.getWindowsWithTitle('TheNameOfTheWindow')[0]
     run_time = datetime.now().strftime("%H:%M:%S")
     if True:
         win.activate(); win.maximize(); time.sleep(1); win.minimize()
         print("Checked:", run_time); print()
-        time.sleep(290)
+        time.sleep(290)'''
 
+ while True:
+    win = gw.getWindowsWithTitle('usersstef/usersstef: Python')[0]
+    run_time = datetime.now().strftime("%H:%M:%S")
+    win.activate(); win.maximize(); time.sleep(1); win.minimize()
+    print("Checked:", run_time); print()
+    time.sleep(2)
+        
+
+        
         
