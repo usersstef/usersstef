@@ -5,6 +5,6 @@ import shutil
 
 for i in range(50):
     shutil.copyfile('D:\\Scripts\\Python\\replicate\\AudioFile_.wav','D:\\Scripts\\Python\\replicate\\AudioFile_'+str(i+1)+'.wav')
-    shutil.copyfile('53_CBank_.wav','53_CBank_'+str(i+1)+'.wav')
+    #shutil.copyfile('53_CBank_.wav','53_CBank_'+str(i+1)+'.wav') # the script need to be in the same folder with file to copy
 
  
