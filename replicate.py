@@ -1,10 +1,11 @@
 
-# The script copy and renames incrementally a file in a given range
+# Generate files with incremented names
+# If the script is run from other path, use the absolute path of the file like the below example:
+# shutil.copyfile('D:\\Scripts\\Python\\replicate\\53_CBank_.wav','D:\\Scripts\\Python\\replicate\\53_CBank_'+str(i+1)+'.wav')
 
 import shutil
 
-for i in range(50):
-    shutil.copyfile('D:\\Scripts\\Python\\replicate\\AudioFile_.wav','D:\\Scripts\\Python\\replicate\\AudioFile_'+str(i+1)+'.wav')
-    #shutil.copyfile('53_CBank_.wav','53_CBank_'+str(i+1)+'.wav') # the script need to be in the same folder with file to copy
+for i in range(10):
+    shutil.copyfile('53_CBank_.wav','53_CBank_'+str(i+1)+'.wav')
 
  
