@@ -14,8 +14,8 @@ print();print("All the common costs until now:", *numlist, sep ='\n');print()
 total = 0
 for sum in numlist:
     total += float(sum)
-print("The common Total until now:    ", total);print()
-print("The common Total divided on 3: ", float(total/3))
+print("The common Total now: ", total);print()
+print("The common Total / 2: ", float(total/2))
 print();input("")
 
 
