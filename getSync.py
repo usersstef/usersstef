@@ -14,14 +14,12 @@ driver = webdriver.Chrome(
     executable_path=r"D:\Scripts\Python\Web_automation\chromedriver.exe"
 )
 driver.maximize_window()
-
 print();print("--- Test started ---")
 
 # Webpages to test
 
 Hangfire      = 'https://www.seleniumeasy.com/test/basic-checkbox-demo.html'
 BatchExplorer = 'https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html'
-
 
 # Loop to select/unselect boxes
 
@@ -35,9 +33,9 @@ while True:
     driver.get(Hangfire);time.sleep(1)
     for i in range(2):
         checkbox()
-    driver.refresh()
+    #driver.refresh()
     driver.get(BatchExplorer);time.sleep(1)
-    driver.find_element_by_xpath("//*[@id='normal-btn-success']").click();time.sleep(1) # aka Refresh button in BE
+    driver.find_element_by_xpath("//*[@id='normal-btn-success']").click();time.sleep(1) # Refresh button in BE
     SyncIcon = "/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a"    # Sync icon is not present in BE
     #SyncIcon = "/html/body/div[2]/div/div[2]/div/div[2]/div[2]"          # Sync icon is present in BE
 
@@ -51,5 +49,6 @@ while True:
         pass
 print("--- Test finished ---")
 driver.close(); print()
+
 
 
