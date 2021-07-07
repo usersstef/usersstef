@@ -1,6 +1,6 @@
 
 # Automated test
-# Block comment: Shift + Alt + A
+# Block comment: Shift + Alt + A (only in VS code editor)
 
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
