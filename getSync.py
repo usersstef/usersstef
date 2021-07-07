@@ -1,5 +1,5 @@
 
-# Automated actions with loops & functions
+# Automated test
 # Block comment: Shift + Alt + A
 
 from selenium import webdriver
@@ -16,12 +16,12 @@ driver = webdriver.Chrome(
 driver.maximize_window()
 print();print("--- Test started ---")
 
-# Webpages to test
+# Web links
 
 Hangfire      = 'https://www.seleniumeasy.com/test/basic-checkbox-demo.html'
 BatchExplorer = 'https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html'
 
-# Loop to select/unselect boxes
+# Trigger commands in Hangfire and Sync icon localization in Batch Explorer
 
 def checkbox():
     driver.find_element_by_xpath("//*[@id='isAgeSelected']").click(); time.sleep(0.5)
@@ -33,11 +33,11 @@ while True:
     driver.get(Hangfire);time.sleep(1)
     for i in range(2):
         checkbox()
-    #driver.refresh()
+    driver.refresh();time.sleep(1)
     driver.get(BatchExplorer);time.sleep(1)
     driver.find_element_by_xpath("//*[@id='normal-btn-success']").click();time.sleep(1) # Refresh button in BE
-    SyncIcon = "/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a"    # Sync icon is not present in BE
-    #SyncIcon = "/html/body/div[2]/div/div[2]/div/div[2]/div[2]"          # Sync icon is present in BE
+    #SyncIcon = "/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a"    # Sync icon is not present in BE
+    SyncIcon = "/html/body/div[2]/div/div[2]/div/div[2]/div[2]"          # Sync icon is present in BE
 
     try:
         driver.find_element_by_xpath(SyncIcon)
@@ -49,6 +49,5 @@ while True:
         pass
 print("--- Test finished ---")
 driver.close(); print()
-
 
 
