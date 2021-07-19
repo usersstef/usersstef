@@ -16,7 +16,13 @@ driver = webdriver.Chrome(
 )
 driver.maximize_window()
 
-# Common variables: timestamps, web links & buttons
+# Common variables: web links, timestamps & page elements
+
+Hangfire      = 'https://www.seleniumeasy.com/test/basic-checkbox-demo.html'
+BatchExplorer = 'https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html'
+Reload        = '//*[@id="normal-btn-success"]'                            # Refresh button in BE
+#SyncIcon      = "/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a"    # Sync icon is not located in BE
+SyncIcon      = "/html/body/div[2]/div/div[2]/div/div[2]/div[2]"           # Sync icon is located in BE
 
 def run_time():
     print(datetime.now().strftime("%H:%M:%S"));print()
@@ -26,12 +32,6 @@ def checkbox():
     driver.find_element_by_xpath("//*[@id='isAgeSelected']").click(); time.sleep(0.5)
     driver.find_element_by_xpath("//*[@id='check1']").click(); time.sleep(0.5)
 print("--- Test started at:");run_time()
-
-Hangfire      = 'https://www.seleniumeasy.com/test/basic-checkbox-demo.html'
-BatchExplorer = 'https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html'
-Reload        = '//*[@id="normal-btn-success"]'                            # Refresh button in BE
-#SyncIcon      = "/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a"    # Sync icon is not located in BE
-SyncIcon      = "/html/body/div[2]/div/div[2]/div/div[2]/div[2]"           # Sync icon is located in BE
 
 # Trigger commands in Hangfire and Sync icon localization in Batch Explorer
 
