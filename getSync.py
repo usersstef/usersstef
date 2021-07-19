@@ -15,21 +15,25 @@ driver = webdriver.Chrome(
     executable_path=r"D:\Scripts\Python\Web_automation\chromedriver.exe"
 )
 driver.maximize_window()
-run_time = datetime.now().strftime("%H:%M:%S");print()
-print("--- Test started at:", run_time)
 
-# Web links
+# Common variables: timestamps, web links & buttons
 
-Hangfire      = 'https://www.seleniumeasy.com/test/basic-checkbox-demo.html'
-BatchExplorer = 'https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html'
-
-# Trigger commands in Hangfire and Sync icon localization in Batch Explorer
-
+def run_time():
+    print(datetime.now().strftime("%H:%M:%S"));print()
 def checkbox():
     driver.find_element_by_xpath("//*[@id='isAgeSelected']").click(); time.sleep(0.5)
     driver.find_element_by_xpath("//*[@id='check1']").click(); time.sleep(0.5)
     driver.find_element_by_xpath("//*[@id='isAgeSelected']").click(); time.sleep(0.5)
     driver.find_element_by_xpath("//*[@id='check1']").click(); time.sleep(0.5)
+print("--- Test started at:");run_time()
+
+Hangfire      = 'https://www.seleniumeasy.com/test/basic-checkbox-demo.html'
+BatchExplorer = 'https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html'
+Reload        = '//*[@id="normal-btn-success"]'                            # Refresh button in BE
+#SyncIcon      = "/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a"    # Sync icon is not located in BE
+SyncIcon      = "/html/body/div[2]/div/div[2]/div/div[2]/div[2]"           # Sync icon is located in BE
+
+# Trigger commands in Hangfire and Sync icon localization in Batch Explorer
 
 while True:
     driver.get(Hangfire);time.sleep(1)
@@ -37,21 +41,17 @@ while True:
         checkbox()
     driver.refresh();time.sleep(1)
     driver.get(BatchExplorer);time.sleep(1)
-    driver.find_element_by_xpath("//*[@id='normal-btn-success']").click();time.sleep(1) # Refresh button in BE
-    #SyncIcon = "/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a"    # Sync icon is not present in BE
-    SyncIcon = "/html/body/div[2]/div/div[2]/div/div[2]/div[2]"          # Sync icon is present in BE
-
+    driver.find_element_by_xpath(Reload).click();time.sleep(1) 
     try:
-        run_time = datetime.now().strftime("%H:%M:%S")
         driver.find_element_by_xpath(SyncIcon)
-        print();print(
+        print(
             "The Sync button is available");time.sleep(1);print()
-        print("--- Test finished at:", run_time)
+        print("--- Test finished at:");run_time()
         break
     except NoSuchElementException:
-        print("The button is not located")
+        print("The button is not available")
         pass
-driver.close(); print()
+driver.close()
 
 
 
