@@ -1,9 +1,10 @@
 
 # Automated test
-# Block comment: Shift + Alt + A (only in VS code editor)
+# Block comment: Shift + Alt + A
 
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
+from datetime import datetime
 import time
 
 # Initializing test environment
@@ -14,7 +15,7 @@ driver = webdriver.Chrome(
     executable_path=r"D:\Scripts\Python\Web_automation\chromedriver.exe"
 )
 driver.maximize_window()
-print();print("--- Test started ---")
+run_time = datetime.now().strftime("%H:%M:%S");print();print("--- Test started at:", run_time)
 
 # Web links
 
@@ -36,18 +37,21 @@ while True:
     driver.refresh();time.sleep(1)
     driver.get(BatchExplorer);time.sleep(1)
     driver.find_element_by_xpath("//*[@id='normal-btn-success']").click();time.sleep(1) # Refresh button in BE
-    SyncIcon = "/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a"    # Sync icon is not present in BE
-    #SyncIcon = "/html/body/div[2]/div/div[2]/div/div[2]/div[2]"          # Sync icon is present in BE
+    #SyncIcon = "/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a"    # Sync icon is not present in BE
+    SyncIcon = "/html/body/div[2]/div/div[2]/div/div[2]/div[2]"          # Sync icon is present in BE
 
     try:
+        run_time = datetime.now().strftime("%H:%M:%S")
         driver.find_element_by_xpath(SyncIcon)
         print();print(
-            "The button is located");time.sleep(1)
+            "The Sync button is available");time.sleep(1);print()
+        print("--- Test finished at:", run_time)
         break
     except NoSuchElementException:
         print("The button is not located")
         pass
-print("--- Test finished ---")
 driver.close(); print()
+
+
 
 
