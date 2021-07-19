@@ -15,7 +15,8 @@ driver = webdriver.Chrome(
     executable_path=r"D:\Scripts\Python\Web_automation\chromedriver.exe"
 )
 driver.maximize_window()
-run_time = datetime.now().strftime("%H:%M:%S");print();print("--- Test started at:", run_time)
+run_time = datetime.now().strftime("%H:%M:%S");print()
+print("--- Test started at:", run_time)
 
 # Web links
 
