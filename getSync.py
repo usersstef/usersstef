@@ -41,7 +41,7 @@ while True:
         checkbox()
     driver.refresh();time.sleep(1)
     driver.get(BatchExplorer);time.sleep(1)
-    driver.find_element_by_xpath(Reload).click();time.sleep(1) 
+    driver.find_element_by_xpath(Reload).click();time.sleep(1)
     try:
         driver.find_element_by_xpath(SyncIcon)
         print(
