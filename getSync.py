@@ -20,9 +20,9 @@ driver.maximize_window()
 
 Hangfire      = 'https://www.seleniumeasy.com/test/basic-checkbox-demo.html'
 BatchExplorer = 'https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html'
-Reload        = '//*[@id="normal-btn-success"]'                            # Refresh button in BE
-#SyncIcon      = "/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a"    # Sync icon is not located in BE
-SyncIcon      = "/html/body/div[2]/div/div[2]/div/div[2]/div[2]"           # Sync icon is located in BE
+Refresh       = '//*[@id="normal-btn-success"]'                            # Refresh button in BE
+#SyncIcon      = " "                                                        # Sync icon not available in BE
+SyncIcon      = "/html/body/div[2]/div/div[2]/div/div[2]/div[2]"           # Sync icon available in BE
 
 def run_time():
     print(datetime.now().strftime("%H:%M:%S"));print()
@@ -31,7 +31,7 @@ def checkbox():
     driver.find_element_by_xpath("//*[@id='check1']").click(); time.sleep(0.5)
     driver.find_element_by_xpath("//*[@id='isAgeSelected']").click(); time.sleep(0.5)
     driver.find_element_by_xpath("//*[@id='check1']").click(); time.sleep(0.5)
-print("--- Test started at:");run_time()
+print();print("--- Test started at:");run_time()
 
 # Trigger commands in Hangfire and Sync icon localization in Batch Explorer
 
@@ -41,7 +41,7 @@ while True:
         checkbox()
     driver.refresh();time.sleep(1)
     driver.get(BatchExplorer);time.sleep(1)
-    driver.find_element_by_xpath(Reload).click();time.sleep(1)
+    driver.find_element_by_xpath(Refresh).click();time.sleep(1)
     try:
         driver.find_element_by_xpath(SyncIcon)
         print(
