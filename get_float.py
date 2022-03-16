@@ -1,5 +1,5 @@
 
-# The script extracts data for final result from a string like 'Dec 31, Doom 3: BFG Edition  5.99'; only 5.99 value is parsed
+# The script pars data for final result from a string like 'Dec 31, Doom 3: BFG Edition  5.99'; only 5.99 value is extracted
 
 import re
 file = open('SteamAllGames.txt')
