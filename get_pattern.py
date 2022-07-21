@@ -5,7 +5,7 @@
 import re
 import sys
 
-#sys.stdout = open('D:\Scripts\Python\output_list.txt', 'w') # write output in a file
+#sys.stdout = open('D:\Scripts\Python\output_list.txt', 'w') # write output in file
 file = open('data.txt') # source file
 numlist = list()
 for line in file:
