@@ -5,7 +5,7 @@
 import re
 import sys
 
-#sys.stdout = open('D:\Scripts\Python\output_list.txt', 'w') # write output in file
+sys.stdout = open('D:\Scripts\Python\output_list.txt', 'w') # write output in file
 file = open('data.txt') # source file
 numlist = list()
 for line in file:
@@ -15,7 +15,7 @@ for line in file:
 print()
 print("Searched items are:", *numlist, sep ='\n')
 print()
-#sys.stdout.close()
+sys.stdout.close()
 
 
 
