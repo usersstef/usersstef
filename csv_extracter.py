@@ -3,8 +3,8 @@ import csv
 import sys
 
 src_file = 'my_test_result.csv'
-index_0 = 'http_req_duration' # data present in cell index 0 - first cell from left in csv
-index_9_link1 = 'https://webadd/address_1' # data present in cell index 9 - the tenth cell from left in csv
+index_0 = 'http_req_duration' # data present in index 0 / cell 1
+index_9_link1 = 'https://webadd/address_1' # data present in index 9 / cell 10
 index_9_link2 = 'https://webadd/address_2'
 
 sys.stdout = open('output.csv', 'w') # output file
