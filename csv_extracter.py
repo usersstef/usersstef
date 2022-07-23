@@ -1,0 +1,19 @@
+
+import csv
+import sys
+
+src_file = 'my_test_result.csv'
+index_0 = 'http_req_duration'
+index_9_link1 = 'https://webadd/address_1'
+index_9_link2 = 'https://webadd/address_2'
+
+sys.stdout = open('output.csv', 'w') # output file
+with open(src_file, newline = '') as infh:  # src file
+    reader = csv.reader(infh)
+    for row in reader:
+        if row[0] == index_0 and row[9] == index_9_link1:
+            # print(row[0], row[1], row[2], row[3]) # prin row by index
+            print(",".join(row))
+        if row[0] == index_0 and row[9] == index_9_link2:
+            print(",".join(row))
+sys.stdout.close()
