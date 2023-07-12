@@ -3,7 +3,7 @@
 
 import os
 
-seq = input("Enter the sequence to be replaced: (Ex: 7_ID)")
+seq = input("Enter a string sequence (Ex: 7_ID) to be replaced: ")
 
 counter = 0
 path = r"C:\Python\Filename_replacer"
