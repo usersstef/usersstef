@@ -1,5 +1,5 @@
-# Generate files with incremented names, just copy the script in the same folder with file to copy,
-# and in line 15 edit the filename by your needs
+# Copy the script in the same folder with file to copy,
+# In line 15 edit the filename by your needs
 
 import os
 
