@@ -1,6 +1,6 @@
 
-# Copy the script in the same folder with file to copy
 # Generate files with incremented names
+# Copy the script in the same folder with file to copy
 
 import shutil
 
