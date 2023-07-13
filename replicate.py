@@ -1,5 +1,6 @@
 
-# Generate files with incremented names, just copy the script in the same folder with file to copy
+# Copy the script in the same folder with file to copy
+# Generate files with incremented names
 
 import shutil
 
