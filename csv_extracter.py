@@ -1,6 +1,5 @@
 
-import csv
-import sys
+import sys, csv
 
 src_file = 'my_test_result.csv'
 index_0 = 'http_req_duration' # data present in index 0 / cell 1
