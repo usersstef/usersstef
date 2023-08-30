@@ -1,9 +1,7 @@
 
 # Script to check tasklist and kill one or multiple procs
 
-import os
-import subprocess
-import time
+import os, subprocess, time
 
 def check_tsklist():            # Function to parse the tasklist and return all current processes
     def getTasks(name):
