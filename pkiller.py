@@ -13,14 +13,14 @@ def check_tsklist():            # Parse the tasklist and return all processes
             if name in r[i]:
                 return r[i]
         return []
-    if __name__ == '__main__': 	# if targeted proc is alive, then kill it
+    if __name__ == '__main__':
         imgName = 'WatUX.exe'
         r = getTasks(imgName)
-        if not r:               # if targeted proc is not alive, then kill another proc at choice
+        if not r:  # targeted proc is not alive so just print the info message (uncomment the other lines to kill another proc if needed)
             print('%s is not running' % (imgName))
             #os.system('taskkill /f /im mspaint.exe')
             #os.system('taskkill /f /im taskmgr.exe')
-        else:  # targeted proc is alive, then kill it; uncomment the other lines to kill at once multiple procs
+        else:      # targeted proc is alive, then kill it (uncomment the other lines to kill one or multiple procs at once if needed)
             os.system('taskkill /f /im WatUX.exe')
             #os.system('taskkill /f /im mspaint.exe')
             #os.system('taskkill /f /im taskmgr.exe')
