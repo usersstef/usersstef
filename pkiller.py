@@ -5,7 +5,7 @@ import os
 import subprocess
 import time
 
-def check_tsklist():            # Parse the tasklist and return all processes
+def check_tsklist():            # Function to parse the tasklist and return all current processes
     def getTasks(name):
         r = os.popen('tasklist /v').read().strip().split('\n')
         for i in range(len(r)):
@@ -16,7 +16,7 @@ def check_tsklist():            # Parse the tasklist and return all processes
     if __name__ == '__main__':
         imgName = 'WatUX.exe'
         r = getTasks(imgName)
-        if not r:  # targeted proc is not alive so just print the info message (uncomment the other lines to kill another proc if needed)
+        if not r:  # targeted proc is not alive, so just print the info message (uncomment the other lines to kill another proc if needed)
             print('%s is not running' % (imgName))
             #os.system('taskkill /f /im mspaint.exe')
             #os.system('taskkill /f /im taskmgr.exe')
