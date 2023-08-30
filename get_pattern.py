@@ -2,8 +2,7 @@
 # The regex matches for '<FirstName> <SecondName> <OptionalName> <OptionalName> (OptionalPhoneNumber | OptionalEmailAddress)'
 # Pattern example: 'Name1 Name2 Name3 Name4 0723-111-222 email@address1.com'
 
-import re
-import sys
+import sys, re
 
 #sys.stdout = open('D:\Scripts\Python\output_list.txt', 'w') # write output in file
 file = open('data.txt') # source file
