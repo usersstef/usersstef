@@ -3,7 +3,7 @@
 
 import os, subprocess, time
 
-def check_tsklist():            # Function to parse the tasklist and return all current processes
+def check_tsklist():  # Function to parse the tasklist and return all current processes
     def getTasks(name):
         r = os.popen('tasklist /v').read().strip().split('\n')
         for i in range(len(r)):
