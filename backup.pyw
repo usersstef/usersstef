@@ -1,14 +1,12 @@
 
-# Importing modules
+import os, sys # Import mod
 
-import os, sys
-
-# Parse & update the tracklist in the txt file
+# Parse & update the tracklist
 
 sys.stdout = open('D:\\Scripts\\Python\\Backup\\Track_list.txt', 'w')
-path = 'D:\musica\My_music\Ambiental'
+path1 = 'D:\musica\My_music\Chill_step'
 files = []
-for r, d, f in os.walk(path):
+for r, d, f in os.walk(path1):
     for file in f:
         if '.mp3' in file:
             files.append(os.path.join(file))
@@ -16,12 +14,19 @@ print()
 for f in files:
     print(f)
 
-path1 = 'D:\musica\My_music\Chill_step'
+path2 = 'D:\musica\My_music\Ambiental'
 files = []
-for r, d, f in os.walk(path1):
+for r, d, f in os.walk(path2):
     for file in f:
         if '.mp3' in file:
             files.append(os.path.join(file))
+
+# path3 = 'D:\musica\My_music\Radio 2000 - 2002'
+# files = []
+# for r, d, f in os.walk(path3):
+#     for file in f:
+#         if '.mp3' in file:
+#             files.append(os.path.join(file))
 print()
 for f in files:
     print(f)
