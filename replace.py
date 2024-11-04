@@ -1,10 +1,10 @@
 
-# Copy the script in the same folder with file to copy
 # In line 12 & 14 edit the filename by your needs
 
 import os
 
-seq = input("Enter a string sequence (Ex: 7_ID) to be replaced: ")
+print()
+seq = input("Enter a string sequence to replace with (Ex: 7_ID): ")
 
 counter = 0
 path = r"C:\Python\Filename_replacer"
@@ -16,5 +16,5 @@ for file_name in os.listdir (path):
         counter += 1
         files.append (new_name)
         os.rename (old_name, new_name)
-print (counter)
-print (files)
+print(); print("There are", counter, "files renamed")
+print(), print (*files, sep = '\n')
