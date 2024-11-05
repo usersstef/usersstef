@@ -4,7 +4,7 @@
 
 import shutil, glob, os
 
-src = r"C:/Python/Filename_generator"
+src = r"D:/Python/Filename_generator"
 dst = r"//mad-fs1/IDS/Engineering/QATeam/Stef1"
 
 print()
