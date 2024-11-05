@@ -7,7 +7,7 @@ print()
 seq = input("Enter a string sequence to replace with (Ex: 7_ID): ")
 
 counter = 0
-path = r"C:\Python\Filename_replacer"
+path = r"D:\Python\Filename_replacer"
 files = [] 
 for file_name in os.listdir (path):
     if "1_ID" in file_name:
@@ -16,5 +16,7 @@ for file_name in os.listdir (path):
         counter += 1
         files.append (new_name)
         os.rename (old_name, new_name)
-print(); print("There are", counter, "files renamed")
+
 print(), print (*files, sep = '\n')
+print(); print("There are", counter, "files renamed")
+
