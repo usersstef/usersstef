@@ -1,8 +1,8 @@
 
 import shutil, glob, os
 
-file_src = r"D:/Python/Filename_replacer/ApexVO"
-# file_src = r"D:/Python/Filename_replacer/FCAudio"
+file_src = r"D:/Python/Filename_replacer/ApexVO"  # Apex VO file path
+# file_src = r"D:/Python/Filename_replacer/FCAudio"  # FC Audio file path
 src = r"D:/Python/Filename_replacer"
 dst = r"//mad-fs1/IDS/Engineering/QATeam/Stef1"
 
