@@ -3,7 +3,6 @@
 # and in for loop edit the filename by your needs
 
 import shutil, glob, os
-from sys import prefix
 
 file_src = r"D:/Python/Filename_generator/FCAudio"  # FC Audio file path
 src = r"D:/Python/Filename_generator"
